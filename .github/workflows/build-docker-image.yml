@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Build react-app
         run: |
-          pushd first-react-app
+          pushd react-app
           yarn install
           yarn build
           popd
@@ -27,7 +27,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: 'trwfff/first-react-app'
+          repository: 'thitipatinkham/react-app'
           tags: latest
           tag_with_ref: true
           tag_with_sha: true
